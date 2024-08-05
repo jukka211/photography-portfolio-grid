@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid</title>
+  <link rel="stylesheet" href="style.css">
+ 
+
+
+   
+</head>
+<style>
+  body {
+    height: 100vh;
+    display: flex;
+    overflow-y: hidden;
+    margin: 0;
+    transition: all 300ms ease-in-out;
+    padding: 10px;
+  }
+
+  .grid-container {
+    height: 100vh;
+    width: 100%;
+    margin-left: 8px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Two columns of equal width */
+    grid-auto-rows: minmax(auto, auto);  /* Two rows with auto height */
+    gap: 20px; /* Gap between grid items */
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    transition: grid-template-columns 300ms ease-in-out; /* Add transition here */
+  }
+
+  .scroll-image {
+    width: 100%;
+      max-height: 100vh;
+    display: block;
+ object-fit: contain;
+    transition: transform 300ms ease-in-out;
+    
+  }
+
+  
+</style>
+<body>
+  <div class="grid-container" onclick="changeGrid()">
+    <img src="https://joachimhaslinger.com/website2022/wp-content/uploads/2022/10/mensstory-11-10-2019-3129www.jpg" alt="Image 1" class="scroll-image">
+    <img src="https://joachimhaslinger.com/website2022/wp-content/uploads/2022/11/runa-viu-30-03-2021-10217bw-1.jpg" alt="Image 2" class="scroll-image">
+    <img src="https://joachimhaslinger.com/website2022/wp-content/uploads/2022/10/bnlf-f6-29-03-2021-8343www.jpg" alt="Image 3" class="scroll-image">
+    <img src="https://joachimhaslinger.com/website2022/wp-content/uploads/2022/11/mensstory-11-10-2019-3860querwww-2-2048x1535.jpg" alt="Image 4" class="scroll-image">
+    <img src="https://joachimhaslinger.com/website2022/wp-content/uploads/2022/11/uni-wien-fr-studentin-salma-mohhamed-00581www-2048x1535.jpg" alt="Image 5" class="scroll-image">
+    <img src="https://joachimhaslinger.com/website2022/wp-content/uploads/2022/10/stad-wien-sommerkampagne-cooling-spot-mariam-06-2021-0076www-3-2048x1365.jpg" alt="Image 6" class="scroll-image">
+    <img src="https://joachimhaslinger.com/website2022/wp-content/uploads/2022/11/runa-viu-30-03-2021-9931www-2-2048x1535.jpg" alt="Image 7" class="scroll-image">
+    <img src="https://joachimhaslinger.com/website2022/wp-content/uploads/2022/10/landscape-bolivien-08-2022-1817www-2048x1365.jpg" alt="Image 8" class="scroll-image">
+    <img src="https://joachimhaslinger.com/website2022/wp-content/uploads/2022/11/jordanien-10-2019-597www-2048x1365.jpg" alt="Image 9" class="scroll-image">
+    <img src="https://joachimhaslinger.com/website2022/wp-content/uploads/2022/10/landscape-bolivien-08-2022-4180www-2048x1365.jpg" alt="Image 10" class="scroll-image">
+    <img src="https://joachimhaslinger.com/website2022/wp-content/uploads/2022/11/landscape-bolivien-08-2022-2414www-2048x1365.jpg" alt="Image 11" class="scroll-image">
+    <img src="https://joachimhaslinger.com/website2022/wp-content/uploads/2022/10/mensstory-11-10-2019-3129www.jpg" alt="Image 12" class="scroll-image">
+    <img src="https://joachimhaslinger.com/website2022/wp-content/uploads/2022/11/jordanien-10-2019-597www-2048x1365.jpg" alt="Image 13" class="scroll-image">
+    <img src="https://joachimhaslinger.com/website2022/wp-content/uploads/2022/10/mensstory-11-10-2019-3129www.jpg" alt="Image 14" class="scroll-image">
+    <img src="https://joachimhaslinger.com/website2022/wp-content/uploads/2022/11/runa-viu-30-03-2021-10217bw-1.jpg" alt="Image 15" class="scroll-image">
+    <img src="https://joachimhaslinger.com/website2022/wp-content/uploads/2022/10/bnlf-f6-29-03-2021-8343www.jpg" alt="Image 16" class="scroll-image">
+    <img src="https://joachimhaslinger.com/website2022/wp-content/uploads/2022/11/mensstory-11-10-2019-3860querwww-2-2048x1535.jpg" alt="Image 16" class="scroll-image">
+    <img src="https://joachimhaslinger.com/website2022/wp-content/uploads/2022/11/uni-wien-fr-studentin-salma-mohhamed-00581www-2048x1535.jpg" alt="Image 17" class="scroll-image">
+    <img src="https://joachimhaslinger.com/website2022/wp-content/uploads/2022/10/stad-wien-sommerkampagne-cooling-spot-mariam-06-2021-0076www-3-2048x1365.jpg" alt="Image 18" class="scroll-image">
+    <img src="https://joachimhaslinger.com/website2022/wp-content/uploads/2022/11/runa-viu-30-03-2021-9931www-2-2048x1535.jpg" alt="Image 19" class="scroll-image">
+    <img src="https://joachimhaslinger.com/website2022/wp-content/uploads/2022/10/landscape-bolivien-08-2022-1817www-2048x1365.jpg" alt="Image 20" class="scroll-image">
+    <img src="https://joachimhaslinger.com/website2022/wp-content/uploads/2022/11/jordanien-10-2019-597www-2048x1365.jpg" alt="Image 21" class="scroll-image">
+    <img src="https://joachimhaslinger.com/website2022/wp-content/uploads/2022/10/landscape-bolivien-08-2022-4180www-2048x1365.jpg" alt="Image 22" class="scroll-image">
+    <img src="https://joachimhaslinger.com/website2022/wp-content/uploads/2022/11/landscape-bolivien-08-2022-2414www-2048x1365.jpg" alt="Image 23" class="scroll-image">
+    <img src="https://joachimhaslinger.com/website2022/wp-content/uploads/2022/10/mensstory-11-10-2019-3129www.jpg" alt="Image 24" class="scroll-image">
+    <img src="https://joachimhaslinger.com/website2022/wp-content/uploads/2022/11/jordanien-10-2019-597www-2048x1365.jpg" alt="Image 25" class="scroll-image">
+</div>
+
+<script>
+  
+    // Attach the changeGrid function to the wheel event
+    function setupGridEvent() {
+      const gridContainer = document.querySelector('.grid-container');
+      gridContainer.addEventListener('wheel', changeGrid);
+    }
+
+    function changeGrid(event) {
+      const gridContainer = document.querySelector('.grid-container');
+      const minColumns = 1;
+      const maxColumns = 12;
+
+      const newColumns = Math.floor(Math.random() * (maxColumns - minColumns + 1)) + minColumns;
+      
+      // Apply grid template columns with transition
+      gridContainer.style.gridTemplateColumns = `repeat(${newColumns}, 1fr)`;
+      
+      event.preventDefault(); // Prevent default scroll behavior
+    }
+
+    // Initialize the event listener
+    setupGridEvent();
+</script>
+  
+  
+</body>
+</html>
